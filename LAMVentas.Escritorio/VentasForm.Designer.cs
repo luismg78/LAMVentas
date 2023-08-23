@@ -49,8 +49,11 @@
             this.TotalPanel = new System.Windows.Forms.Panel();
             this.TotalLabel = new System.Windows.Forms.Label();
             this.ClientePanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.VentaTotalLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ProductosDataGridView)).BeginInit();
             this.TotalPanel.SuspendLayout();
+            this.ClientePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // CodigoLabel
@@ -133,7 +136,7 @@
             this.ProductosDataGridView.RowTemplate.Height = 50;
             this.ProductosDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.ProductosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ProductosDataGridView.Size = new System.Drawing.Size(523, 456);
+            this.ProductosDataGridView.Size = new System.Drawing.Size(1002, 583);
             this.ProductosDataGridView.TabIndex = 6;
             this.ProductosDataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ProductosDataGridView_KeyDown);
             // 
@@ -146,6 +149,7 @@
             this.CantidadDataGridView.HeaderText = "Cantidad";
             this.CantidadDataGridView.MinimumWidth = 6;
             this.CantidadDataGridView.Name = "CantidadDataGridView";
+            this.CantidadDataGridView.ReadOnly = true;
             this.CantidadDataGridView.Width = 160;
             // 
             // CodigoDataGridView
@@ -157,6 +161,7 @@
             this.CodigoDataGridView.HeaderText = "Código";
             this.CodigoDataGridView.MinimumWidth = 6;
             this.CodigoDataGridView.Name = "CodigoDataGridView";
+            this.CodigoDataGridView.ReadOnly = true;
             this.CodigoDataGridView.Width = 138;
             // 
             // DescripcionDataGridView
@@ -168,6 +173,7 @@
             this.DescripcionDataGridView.HeaderText = "Descripción";
             this.DescripcionDataGridView.MinimumWidth = 6;
             this.DescripcionDataGridView.Name = "DescripcionDataGridView";
+            this.DescripcionDataGridView.ReadOnly = true;
             // 
             // PrecioDataGridView
             // 
@@ -201,9 +207,9 @@
             this.TotalPanel.Controls.Add(this.TotalLabel);
             this.TotalPanel.Controls.Add(this.CodigoTextBox);
             this.TotalPanel.Controls.Add(this.CodigoLabel);
-            this.TotalPanel.Location = new System.Drawing.Point(12, 474);
+            this.TotalPanel.Location = new System.Drawing.Point(12, 601);
             this.TotalPanel.Name = "TotalPanel";
-            this.TotalPanel.Size = new System.Drawing.Size(852, 97);
+            this.TotalPanel.Size = new System.Drawing.Size(1331, 97);
             this.TotalPanel.TabIndex = 7;
             // 
             // TotalLabel
@@ -211,9 +217,9 @@
             this.TotalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TotalLabel.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TotalLabel.Location = new System.Drawing.Point(381, 8);
+            this.TotalLabel.Location = new System.Drawing.Point(329, 8);
             this.TotalLabel.Name = "TotalLabel";
-            this.TotalLabel.Size = new System.Drawing.Size(455, 80);
+            this.TotalLabel.Size = new System.Drawing.Size(986, 80);
             this.TotalLabel.TabIndex = 0;
             this.TotalLabel.Text = "Total $0.00";
             this.TotalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -222,22 +228,48 @@
             // 
             this.ClientePanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.ClientePanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientePanel.BackColor = System.Drawing.Color.White;
+            this.ClientePanel.Controls.Add(this.VentaTotalLabel);
+            this.ClientePanel.Controls.Add(this.label1);
             this.ClientePanel.Location = new System.Drawing.Point(12, 12);
             this.ClientePanel.Name = "ClientePanel";
-            this.ClientePanel.Size = new System.Drawing.Size(320, 456);
+            this.ClientePanel.Size = new System.Drawing.Size(320, 583);
             this.ClientePanel.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.BlueViolet;
+            this.label1.Location = new System.Drawing.Point(15, 494);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Total Venta";
+            // 
+            // VentaTotalLabel
+            // 
+            this.VentaTotalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.VentaTotalLabel.AutoSize = true;
+            this.VentaTotalLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.VentaTotalLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.VentaTotalLabel.Location = new System.Drawing.Point(15, 526);
+            this.VentaTotalLabel.Name = "VentaTotalLabel";
+            this.VentaTotalLabel.Size = new System.Drawing.Size(60, 28);
+            this.VentaTotalLabel.TabIndex = 1;
+            this.VentaTotalLabel.Text = "$0.00";
             // 
             // VentasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(876, 583);
+            this.ClientSize = new System.Drawing.Size(1355, 710);
             this.Controls.Add(this.ClientePanel);
             this.Controls.Add(this.TotalPanel);
             this.Controls.Add(this.ProductosDataGridView);
-            this.MinimumSize = new System.Drawing.Size(876, 583);
+            this.MinimumSize = new System.Drawing.Size(1373, 757);
             this.Name = "VentasForm";
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
@@ -249,6 +281,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ProductosDataGridView)).EndInit();
             this.TotalPanel.ResumeLayout(false);
             this.TotalPanel.PerformLayout();
+            this.ClientePanel.ResumeLayout(false);
+            this.ClientePanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -260,11 +294,13 @@
         private DataGridView ProductosDataGridView;
         private Panel TotalPanel;
         private Label TotalLabel;
+        private Panel ClientePanel;
         private DataGridViewTextBoxColumn CantidadDataGridView;
         private DataGridViewTextBoxColumn CodigoDataGridView;
         private DataGridViewTextBoxColumn DescripcionDataGridView;
         private DataGridViewTextBoxColumn PrecioDataGridView;
         private DataGridViewTextBoxColumn ImporteDataGridView;
-        private Panel ClientePanel;
+        private Label VentaTotalLabel;
+        private Label label1;
     }
 }
